@@ -94,3 +94,18 @@ main {
 footer {
   background-color: purple;
 }
+
+@media screen and (min-width: 800px) {
+  .info-section {
+    flex-direction: row;
+  }
+
+  .info-section h2 {
+    flex: 2 1 10rem;
+    text-align: right;
+  }
+
+  .info-section > .content {
+    flex: 5 1 50rem;
+  }
+}
