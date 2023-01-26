@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Noto+Sans+JP:wght@500&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Roboto&family=Roboto+Mono&display=swap");
 
 :root {
   --turquoise: #4cbfa6;
@@ -11,14 +11,16 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  color: var(--purple);
+  background-color: var(--white);
 }
 
 h1 {
-  font-size: 200%;
+  font-size: 175%;
 }
 
 h2 {
-  font-size: 175%;
+  font-size: 165%;
 }
 
 h3 {
@@ -29,26 +31,76 @@ h4 {
   font-size: 135%;
 }
 
+a {
+  text-decoration: none;
+  color: var(--purple);
+}
+
 .japanese-text {
   font-family: "Noto Sans JP", sans-serif;
 }
 
 header {
   position: fixed;
-  background-color: yellow;
+  background-color: var(--white);
   display: flex;
   justify-content: space-between;
   width: 100%;
   z-index: 100;
   height: 2.5rem;
   align-items: center;
-  padding-inline: 2rem;
+  padding-inline: clamp(1rem, calc(10vw - 2rem), 10rem);
+  font-family: "Roboto Mono", monospace;
+  border-bottom: solid 1px var(--digi-denim);
+  -webkit-box-shadow: 0px 0px 21px 3px rgba(2, 59, 89, 0.59);
+  box-shadow: 0px 0px 21px 3px rgba(2, 59, 89, 0.59);
 }
 
-header h1 {
-  /* font-family: "JetBrains Mono", monospace; */
-  font-size: 2rem;
-  display: inline;
+header .logo {
+  display: flex;
+  height: 100%;
+}
+
+header .logo h1 {
+  line-height: 1.3;
+  letter-spacing: 0.16em;
+  animation: typing 1.5s steps(11, end);
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 5px;
+}
+
+header .logo img:last-child {
+  opacity: 1;
+  animation: blink-caret 1s step-end infinite;
+  animation-delay: 1s;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+header img {
+  object-fit: cover;
+  object-position: left;
+  height: 100%;
 }
 
 nav > ul {
@@ -59,7 +111,6 @@ nav > ul {
 
 main {
   padding-top: 2.5rem;
-  background-color: pink;
 }
 
 .hero {
@@ -67,14 +118,21 @@ main {
   min-height: 200px;
   background-image: url("https://placekitten.com/1000/1000");
   background-size: cover;
-  background-position: center;
+  background-position: 25%;
 }
 
 .hero h2 {
-  font-size: 5rem;
   position: absolute;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: clamp(1rem, 3vw, 2rem);
+  right: clamp(1rem, calc(10vw - 2rem), 10rem);
+  -webkit-text-fill-color: var(--white);
+  -webkit-text-stroke-color: var(--orchid);
+  -webkit-text-stroke-width: clamp(1px, calc(1vw - 0.3rem), 3px);
+  font-size: clamp(1rem, calc(10vw - 1rem), 5rem);
+  margin: 0;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
 
 .container {
@@ -83,7 +141,6 @@ main {
 
 .info-section {
   flex-direction: column;
-  background-color: green;
   padding-block: 1rem;
   display: flex;
 }
@@ -95,7 +152,8 @@ main {
 .info-section-title {
   padding-inline: 1rem;
   scroll-margin-top: 3.5rem;
-  border-right: solid 5px black;
+  border-bottom: solid 5px var(--digi-denim);
+  margin-bottom: 1rem;
 }
 
 .info-section .content {
@@ -115,7 +173,7 @@ main {
 .work-item {
   border-radius: 10px;
   position: relative;
-  border: solid 0.25rem cyan;
+  border: solid 0.25rem var(--turquoise);
   display: block;
   background-image: url("https://placekitten.com/600/500");
   background-size: cover;
@@ -132,7 +190,7 @@ main {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: burlywood;
+  background-color: var(--soft-lilac);
   opacity: 50%;
   transition: opacity 0.2s ease-in-out;
 }
@@ -146,9 +204,10 @@ main {
 }
 
 .work-item .label {
+  color: var(--soft-lilac);
   position: absolute;
   z-index: 2;
-  background-color: yellowgreen;
+  background-color: var(--turquoise);
   width: fit-content;
   bottom: 1rem;
   padding: 1rem;
@@ -158,14 +217,23 @@ footer {
   background-color: purple;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 400px) {
+  .hero h2 {
+    writing-mode: unset;
+    text-orientation: unset;
+  }
+}
+@media screen and (min-width: 1000px) {
   .info-section {
     flex-direction: row;
   }
 
   .info-section-title {
-    flex: 1 1 10rem;
+    flex: 1 1 11rem;
     text-align: right;
+    border-bottom: none;
+    border-right: solid 5px var(--digi-denim);
+    margin-bottom: unset;
   }
 
   .info-section > .content {
