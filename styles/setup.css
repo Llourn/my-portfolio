@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Roboto&family=Roboto+Mono&display=swap");
 
+/* Variables */
 :root {
   --turquoise: #4cbfa6;
   --lilac: #f6ebf4;
@@ -9,6 +10,7 @@
   --white: whitesmoke;
 }
 
+/* Standards setup for elements used throughout the project */
 html {
   scroll-behavior: smooth;
 }
@@ -49,6 +51,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Typography utilities*/
 .japanese-text {
   font-family: "Noto Sans JP", sans-serif;
 }

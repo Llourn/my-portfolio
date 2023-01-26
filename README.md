@@ -4,6 +4,10 @@
 
 This is a portfolio site built with HTML and CSS. Designed to showcase my work and provide contact information for potential employment opportunities.
 
+The live site can be viewed [here](https://llourn.github.io/my-portfolio/).
+
+![Screenshot of the live site](./screenshot.png)
+
 ## Table of Contents (Optional)
 
 - [Installation](#installation)
