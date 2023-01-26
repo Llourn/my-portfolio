@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Roboto&family=Roboto+Mono&display=swap");
+
+:root {
+  --turquoise: #4cbfa6;
+  --lilac: #f6ebf4;
+  --purple: #482673;
+  --orchid: #ed0b70;
+  --denim: #023b59;
+  --white: whitesmoke;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--purple);
+  background-color: var(--white);
+}
+
+h1 {
+  font-size: 175%;
+}
+
+h2 {
+  font-size: 165%;
+}
+
+h3 {
+  font-size: 150%;
+}
+
+h4 {
+  font-size: 135%;
+}
+
+p {
+  line-height: 1.2;
+}
+
+a {
+  color: var(--orchid);
+  text-decoration: none;
+  transition: color 0.1s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.japanese-text {
+  font-family: "Noto Sans JP", sans-serif;
+}

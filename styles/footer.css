@@ -1,0 +1,9 @@
+footer {
+  position: relative;
+  z-index: -1;
+  padding-block: 5rem;
+  background-color: var(--lilac);
+  background-color: var(--purple);
+  color: var(--white);
+  text-align: center;
+}

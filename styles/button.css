@@ -1,53 +1,47 @@
 /* Inpsired by https://codepen.io/davidicus/pen/emgQKJ */
 
 .btn {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 160px;
   color: #fff;
-  cursor: pointer;
+  background-color: var(--denim);
+  background-color: var(--turquoise);
   font-size: 16px;
   font-weight: 400;
   line-height: 45px;
-  /* margin: 0 0 2em; */
-  max-width: 160px;
-  position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  width: 100%;
-  background-color: var(--digi-denim);
-  background-color: var(--turquoise);
-  border-radius: 10px;
+  cursor: pointer;
 }
-@media (min-width: 600px) {
-  /* .btn {
-    margin: 0 1em 2em;
-  } */
-}
+
 .btn:hover {
   text-decoration: none;
 }
 
 .btn-animated {
+  position: relative;
   border: 1px solid;
   overflow: hidden;
-  position: relative;
 }
 .btn-animated span {
   z-index: 20;
 }
 .btn-animated::after {
-  background: #fff;
   content: "";
+  position: absolute;
+  width: 50px;
   height: 155px;
   left: -75px;
-  opacity: 0.2;
-  position: absolute;
   top: -50px;
+  opacity: 0.2;
+  background: #fff;
   transform: rotate(35deg);
-  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
-  width: 50px;
-  /* z-index: -10; */
+  transition: left 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .btn-animated:hover::after {
   left: 120%;
-  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: left 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
