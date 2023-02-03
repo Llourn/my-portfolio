@@ -8,7 +8,7 @@ The live site can be viewed [here](https://llourn.github.io/my-portfolio/).
 
 ![Screenshot of the live site](./screenshot.png)
 
-## Table of Contents (Optional)
+## Table of Contents
 
 - [Installation](#installation)
 - [Credits](#credits)
